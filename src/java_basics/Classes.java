@@ -34,15 +34,16 @@ public class Classes {
 
 	public static void main(String[] args) {
 		System.out.println("Creating a person please enter name, age and gender(male/female) in new lines");
-		Scanner input = new Scanner(System.in);
-		Person person1 = new Person();
-		person1.name = input.nextLine();
-		person1.age = input.nextInt();
-		person1.gender = input.nextLine();
-		person1.printName();
-		person1.printAge();
-		person1.printGender();
-		System.out.println("Name of person is " + person1.name);
-		System.out.println(person1.yearsLeftInRetirement() + " years are left in my retirment");
+		try (Scanner input = new Scanner(System.in)) {
+			Person person1 = new Person();
+			person1.name = input.nextLine();
+			person1.age = input.nextInt();
+			person1.gender = input.nextLine();
+			person1.printName();
+			person1.printAge();
+			person1.printGender();
+			System.out.println("Name of person is " + person1.name);
+			System.out.println(person1.yearsLeftInRetirement() + " years are left in my retirment");
+		}
 	}
 }

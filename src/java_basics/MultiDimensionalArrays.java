@@ -15,17 +15,18 @@ public class MultiDimensionalArrays {
 			}
 		}
 
-		// Taking input from user and than printing
-		Scanner input = new Scanner(System.in);
-		int[][] grid2 = new int[2][2];
-		for (int i = 0; i < grid2.length; i++) {
-			for (int j = 0; j < grid2.length; j++) {
-				grid2[i][j] = input.nextInt();
+		try (// Taking input from user and than printing
+		Scanner input = new Scanner(System.in)) {
+			int[][] grid2 = new int[2][2];
+			for (int i = 0; i < grid2.length; i++) {
+				for (int j = 0; j < grid2.length; j++) {
+					grid2[i][j] = input.nextInt();
+				}
 			}
-		}
-		for (int i = 0; i < grid2.length; i++) {
-			for (int j = 0; j < grid2.length; j++) {
-				System.out.println(grid2[i][j]);
+			for (int i = 0; i < grid2.length; i++) {
+				for (int j = 0; j < grid2.length; j++) {
+					System.out.println(grid2[i][j]);
+				}
 			}
 		}
 	}
